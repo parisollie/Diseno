@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-/*Vid41
- //Propiedades de un botón para ahorrar codigo
- Agregamos un modificador,para no estar agregando varias veces las propiedades
- de nuestro botón*/
+/*
+   V-41,Paso 1.9
+   Propiedades de un botón para ahorrar código,Agregamos un modificador,para no
+   estar agregando varias veces las propiedades de nuestro botón
+*/
 struct boton: ViewModifier{
     //Agregamos una variable para modificar el color de cada botón.
     var color: Color

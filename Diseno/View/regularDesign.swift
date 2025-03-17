@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//V-39
+//V-39,paso 1.
 //Diseño Horizontal-cuando voltemos el celular a horizontal.
 struct regularDesign:View{
     var body: some View{

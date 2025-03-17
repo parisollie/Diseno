@@ -5,8 +5,6 @@
 //  Created by Paul Jaime Felix Flores on 17/03/23.
 //
 
-
-
 /*
  V-35,Paso 1.0 Contenedores
  
@@ -26,8 +24,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    //V-39
-    /*Valores de entorno o enviromentValues,sólo ponemos el
+
+    /*
+     V-39,paso 1.4
+     Valores de entorno o enviromentValues,sólo ponemos el
      @,para pider acceder a ellas.
      
      SizeClass
@@ -38,8 +38,8 @@ struct ContentView: View {
     @Environment(\.verticalSizeClass) var vsizeClass
     
     var body: some View {
-        //V-39
-        /*Cada vez que cambiamos la posición del teléfono
+        
+        /*Paso 1.7,Cada vez que cambiamos la posición del teléfono
          nos cambiará la dirección del diseño*/
         if hsizeClass == .compact&&vsizeClass == .regular{
             compactDesign()

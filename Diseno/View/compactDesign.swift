@@ -7,25 +7,26 @@
 
 import SwiftUI
 
-//V-39
+//V-39,Paso 1.5
 //Diseño Vertical.
 struct compactDesign:View{
     
-    //V-42
+    //V-42,paso 1.12
     //Creamos nuestas constantes.
     
     let numero = "123456789"
     let mensaje = "Hola,¿como estas?"
     
-    //V-42 Funciones de nuestros botones para mandar mensaje y llamar.
+    //Paso 1.13, Funciones de nuestros botones para mandar mensaje y llamar.
     func sendMessage (){
         //Agregamos nuestro numero y mensaje
         let sms = "sms:\(numero)&body=\(mensaje)"
         //Convertimos de un mensaje a un string.
         
         guard let stringSMS = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)else {return}
-    /*string: stringSMS! , nos pide la parte de arriba, cpon el (!) le decimos si tenemos un numero
-    [:], no queremos ninguna opcion */
+         
+        /*string: stringSMS! , nos pide la parte de arriba, cpon el (!) le decimos si tenemos un numero
+         [:], no queremos ninguna opcion */
         UIApplication.shared.open(URL.init(string: stringSMS)!,options: [:],completionHandler: nil)
     }
     
@@ -35,15 +36,16 @@ struct compactDesign:View{
         UIApplication.shared.open(number)
     }
     
-    /**************************************************************************************************************************************/
+    /****************************************************************************************************************************/
     var body: some View{
         //cuando voltemos el celular a Vertical.
         ZStack{
-            //Cambiamos el background del canvas ,solo pone el safe area y le decimos que ignore el area segura para que lo pinte todo.
+            
+            //Paso 1.6,Cambiamos el background del canvas ,solo pone el safe area y le decimos que ignore el area segura para que lo pinte todo.
             Color.green.edgesIgnoringSafeArea(.all)
             //Para colocar varios elementos en el body usamos VStack.
             VStack(){
-                //40-Llamamos el símbolo de la persona de Simbolos SF.
+                //V-40,paso 1.8,Llamamos el símbolo de la persona de Simbolos SF.
                 Image(systemName: "person.crop.circle").font(.system(size: 100,weight: .bold))
                 Text("Esteban Martinez")
                     .font(.largeTitle)
@@ -54,13 +56,15 @@ struct compactDesign:View{
                     .foregroundColor(.white)
                     .bold()
                     .italic()
-                //V-41
+                
+                //V-41,paso 1.11
                 HStack{
                     Button(action:{
-                        //Mandamos a llamar nuestra función.
+                        //Mandamos a llamar nuestra función de botón.
                         sendCall()
                     }){
                         Image(systemName: "phone.fill")
+                        //Paso 1.10 mandamos a llamar a nuestra estructura botón.
                             .modifier(boton(color: .blue))
                     }
                     
