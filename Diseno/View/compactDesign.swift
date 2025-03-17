@@ -64,7 +64,7 @@ struct compactDesign:View{
                         sendCall()
                     }){
                         Image(systemName: "phone.fill")
-                        //Paso 1.10 mandamos a llamar a nuestra estructura botón.
+                            //Paso 1.10 mandamos a llamar a nuestra estructura botón.
                             .modifier(boton(color: .blue))
                     }
                     
